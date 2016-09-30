@@ -19,7 +19,7 @@
       <button class="btn btn-primary" ng-click="list.narrowItDown(list.searchTerm)">Narrow It Down For Me!</button>
     </div>
     <!-- found-items should be implemented as a component -->
-    <found-items items="list.found" title="{{list.title}}" on-remove="list.removeItem(index)"></found-items>
+    <found-items items="list.found" title="{{list.title}}" msg="{{list.msg}}" on-remove="list.removeItem(index)"></found-items>
   </div>
 
 </body>

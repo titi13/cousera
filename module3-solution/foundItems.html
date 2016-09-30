@@ -1,4 +1,5 @@
-<br><br><h3>{{list.items.length}}{{ list.myTitle }}</h3>
+<br><br><h3 ng-show=list.items.length>{{list.items.length}}{{ list.myTitle }}</h3>
+<h3 ng-hide=list.items.length>{{ list.myMsg }}</h3>
 <ul>
   <li ng-repeat="item in list.items">
     <strong>{{item.name}} ({{item.short_name}}) :</strong> {{item.description}}
