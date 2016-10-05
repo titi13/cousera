@@ -1,27 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" >
   <head>
-    <title>Narrow Down Your Menu Choice</title>
+    <title>MenuApp</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/styles/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles/styles.css">
   </head>
-<body>
+<body ng-app= 'MenuApp'>
    <div class="container">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
+    <h1>Welcome to our Restaurant</h1>
 
-    <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control">
-    </div>
-    <div class="form-group narrow-button">
-      <button class="btn btn-primary">Narrow It Down For Me!</button>
-    </div>
+    <ui-view></ui-view>
+   </div>
 
-  </div>
-  
+
+
+
   <!-- Libraries -->
   <script src="lib/angular.min.js"></script>
   <script src="lib/angular-ui-router.min.js"></script>
+
+  <!-- Modules -->
+  <script src="src/menuapp/menuapp.module.js"></script>
+  <script src="src/menuapp/data.module.js"></script>
+
+  <!-- Routes -->
+  <script src="src/routes.js"></script>
+
+  <!-- 'MenuApp' module artifacts -->
+  <script src="src/menuapp/categories.component.js"></script>
+  <script src="src/menuapp/categories.controller.js"></script>
+  <!-- <script src="src/menuapp/items.component.js"></script> -->
+  <script src="src/menuapp/menudata.service.js"></script>
+
 
 </body>
 </html>
