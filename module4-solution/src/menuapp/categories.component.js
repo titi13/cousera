@@ -5,13 +5,13 @@ angular.module('data')
 .component('catList', {
   templateUrl: 'src/menuapp/templates/catList.template.html',
   bindings: {
-    categories: '<'
+    items: '<'
   },
-  controller: CategoriesController
+  controller: CategoriesComponentController
 });
 
-CategoriesController.$inject = ['$rootScope']
-function CategoriesController($rootScope) {
+CategoriesComponentController.$inject = ['$rootScope']
+function CategoriesComponentController($rootScope) {
   var $ctrl = this;
   var cancellers = [];
 

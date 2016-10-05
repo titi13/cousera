@@ -5,10 +5,9 @@ angular.module('data')
 .controller('CategoriesController', CategoriesController);
 
 
-CategoriesController.$inject = ['categories'];
-function CategoriesController( categories) {
-  var list = this;
-  list.categories = categories.data;
-}
+CategoriesController.$inject = ['items'];
+function CategoriesController(items) {
+  this.items = items.data;
+};
 
 })();
