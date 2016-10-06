@@ -22,17 +22,17 @@ function MenuDataService($http, $q){
     return deferred.promise;
   }
 
-  service.getItemsForCategory(categoryShortName) = function () {
-    var response = $http({
-      method: "GET",
-      url: ("https://davids-restaurant.herokuapp.com/menu_items.json"),
-      params: {
-        category: categoryShortName
-      }
-    });
-
-    return response;
-  };
+  // service.getItemsForCategory(categoryShortName) = function () {
+  //   var response = $http({
+  //     method: "GET",
+  //     url: ("https://davids-restaurant.herokuapp.com/menu_items.json"),
+  //     params: {
+  //       category: categoryShortName
+  //     }
+  //   });
+  //
+  //   return response;
+  // };
 }
 
 })();

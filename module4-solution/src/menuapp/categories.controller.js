@@ -5,10 +5,13 @@ angular.module('data')
 .controller('CategoriesController', CategoriesController);
 
 
-CategoriesController.$inject = ['items'];
-function CategoriesController(items) {
+CategoriesController.$inject = ['MenuDataService', 'items'];
+function CategoriesController(MenuDataService, items) {
   var list =this;
   list.items = items;
+  console.log(list.items);
+  console.log(list.items["0"].short_name);
+
 };
 
 })();

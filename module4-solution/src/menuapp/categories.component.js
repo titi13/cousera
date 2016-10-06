@@ -4,10 +4,11 @@
 angular.module('data')
 .component('catList', {
   templateUrl: 'src/menuapp/templates/catList.template.html',
+  controller: CategoriesComponentController,
   bindings: {
     items: '<'
-  },
-  controller: CategoriesComponentController
+  }
+
 });
 
 CategoriesComponentController.$inject = ['$rootScope']
