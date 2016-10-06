@@ -1,3 +1,20 @@
+.panel {
+  width: 85%;
+  margin: 10px;
+  padding: 10px;
+  align-items:
+}
+.cat-items {
+    width: 40%;
+    float: left;
+}
+.menu-items {
+    margin-left: 30px;
+    width: 40%;
+    float: left;
+}
+
+
 h1 {
   margin-bottom: 30px;
 }

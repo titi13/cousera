@@ -8,10 +8,10 @@
   function MenuItemsController(items) {
     var catDetail = this;
     catDetail.menuItems = items.data.menu_items;
+    catDetail.name = items.data.category.name;
+    // console.log(items.data.menu_items);
 
-    console.log(items.data.menu_items);
 
-    // catDetail.name = items.data.
     };
 
 })();
