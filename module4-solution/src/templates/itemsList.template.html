@@ -1,0 +1,11 @@
+<ul class="list-group" style="width: 40%;">
+  <li class="list-group-item selection" ng-repeat="menuitem in $ctrl.items" >
+    <h4>{{menuitem.name}}
+        <span class="badge pull-left">{{menuitem.short_name}} </span>
+      </h4><br>
+    <p>
+      {{menuitem.description}}
+    </p>
+
+  </li>
+</ul>

@@ -1,17 +1,16 @@
 (function () {
 'use strict';
 
-angular.module('data')
+angular.module('Data')
 .component('catList', {
-  templateUrl: 'src/menuapp/templates/catList.template.html',
-  controller: CategoriesComponentController,
+  templateUrl: 'src/templates/catList.template.html',
   bindings: {
     items: '<'
-  }
-
+  },
+  controller: CategoriesComponentController
 });
 
-CategoriesComponentController.$inject = ['$rootScope']
+CategoriesComponentController.$inject = ['$rootScope'];
 function CategoriesComponentController($rootScope) {
   var $ctrl = this;
   var cancellers = [];
@@ -41,8 +40,6 @@ function CategoriesComponentController($rootScope) {
       item();
     });
   };
-
 };
-
 
 })();
