@@ -1,6 +1,6 @@
 <ul>
-  <li  ng-repeat="item in $ctrl.items" ui-sref="categories.menuItems({catId: item.short_name})">
-    <h4>({{ item.short_name }}) {{ item.name }} </h4>
+  <li  ng-repeat="item in $ctrl.items" >
+    <h4><a ui-sref="categories.menuItems({catId: item.short_name})">({{ item.short_name }}) {{ item.name }}</a> </h4>
     <p>
       {{ item.special_instructions }}
     </p>
