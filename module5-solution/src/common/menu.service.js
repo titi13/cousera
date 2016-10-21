@@ -40,20 +40,11 @@ function MenuService($http, ApiPath) {
   service.getMenuItem = function (short_name) {
 
     return $http.get(ApiPath + '/menu_items/'+ short_name +'.json').then(function (response) {
-      return response.data;
-      console.log(response.data);
+      return response;
+      // console.log(response.data);
     });
   };
-
-  service.getValidation = function (short_name) {
-    var config = {};
-
-    return $http.get(ApiPath + '/menu_items/'+ short_name +'.json', config).success(function (response) {
-      return response.data=true;
-    }).error(function(response){
-      return response.data=false;
-    });
-  };
+  
 }
 
 })();

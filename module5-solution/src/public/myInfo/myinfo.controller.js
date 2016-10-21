@@ -15,10 +15,13 @@ function MyInfoController(MenuService, ApiPath) {
   myInfoCtrl.info = MenuService.getMyInfo();
   if(myInfoCtrl.info.registered==true){
     myInfoCtrl.registered = true;
-
-    MenuService.getMenuItem(myInfoCtrl.info.menuNumber).then(function(result){
-      myInfoCtrl.menuItem =result;
-    });
+    if (myInfoCtrl.info.menuNumber!= undefined) {
+      MenuService.getMenuItem(myInfoCtrl.info.menuNumber).then(function(result){
+      myInfoCtrl.menuItem =result.data;});
+      myInfoCtrl.dish=true;
+    }else {
+      myInfoCtrl.dish=false;
+    }
   }
 }
 
