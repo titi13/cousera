@@ -22,19 +22,18 @@ function SignUpController(MenuService) {
 
       MenuService.getMenuItem(angular.uppercase(signUpCtrl.menuNumber)).then(function(result){
         signUpCtrl.menuItem =result.data;
+        if (signUpCtrl.menuItem != undefined) {
+          MenuService.storeMyInfo(myInfo);
+          signUpCtrl.saved=true;
+          signUpCtrl.favoriteDish=false;
+          console.log(signUpCtrl.favoriteDish+"1");
+        }
+      }).catch(function(error){
+          // console.log(signUpCtrl.menuItem);
+          signUpCtrl.favoriteDish=true;
+          signUpCtrl.saved=false;
+          console.log(signUpCtrl.favoriteDish+"2");
       });
-
-      if (signUpCtrl.menuItem != undefined) {
-        MenuService.storeMyInfo(myInfo);
-        signUpCtrl.saved=true;
-        signUpCtrl.favoriteDish=false;
-        console.log(signUpCtrl.favoriteDish+"1");
-      }else {
-        // console.log(signUpCtrl.menuItem);
-        signUpCtrl.favoriteDish=true;
-        signUpCtrl.saved=false;
-        console.log(signUpCtrl.favoriteDish+"2");
-      }
     }else {
       MenuService.storeMyInfo(myInfo);
       signUpCtrl.saved=true;
